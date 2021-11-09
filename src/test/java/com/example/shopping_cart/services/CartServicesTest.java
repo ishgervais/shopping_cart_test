@@ -142,7 +142,7 @@ public class CartServicesTest {
         when(cartRepository.findById(cart.getId())).thenReturn(Optional.of(cart));
         when(cartService.retrieveProduct(cart.getId(), product.getId())).thenReturn(product);
 
-        String expected = "[id=1, code=M002, name=Mathematics, description=Mathematics Product]";
+        String expected = "[id=1, code=T-3443, name=T-SHIRT, price=12000, quantity=1]";
 
         assertEquals(expected, cart.getProducts());
         verify(cartRepository).findById(cart.getId());
