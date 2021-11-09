@@ -41,7 +41,6 @@ public class ProductServicesTest {
     public  void createProduct(){
         when(productRepository.save(ArgumentMatchers.any(Product.class))).thenReturn(new Product(2L, "T-SHIRT","TP-13443",11000d,1));
         assertEquals("TP-13443",productService.createProduct(3L, "SHIRT","S-32443",10000d,1).getCode());
-//        assertEquals("M001",productService.createProduct("M001","Math 1","Mathematics I", 1).getCode());
     }
 
     @Test
